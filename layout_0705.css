@@ -26,6 +26,7 @@ header,nav,footer{
 }
 main{
   display: flex;
+  background-color: #eee;
 }
 aside{
   width: 10%;
@@ -35,5 +36,10 @@ aside{
 section{
   width: 80%;
   min-height: 600px;
-  background-color: #eee;
+  background-color: white;
+}
+
+#pagination{
+  display: flex;
+  justify-content: center;
 }

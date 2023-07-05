@@ -18,7 +18,10 @@
         alert("응답하지 않는 서버입니다");
         location.href="index.html";
       }
-      console.log(result);
+
+      printContacts(result.contacts);
+      const pagination = getPagination(result);
+      printPagination(pagination);
     })
   </script>
 </head>
@@ -33,13 +36,13 @@
     <main>
       <aside></aside>
       <section>
-        <table class="table">
+        <table class="table table-hover">
           <thead>
             <tr>
-              <td>번호</td>
-              <td>이름</td>
-              <td>주소</td>
-              <td>연락처</td>
+              <th>번호</th>
+              <th>이름</th>
+              <th>연락처</th>
+              <th>주소</th>
             </tr>
           </thead>
           <tbody id="tbody">
