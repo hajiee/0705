@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 #page{
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 #page>header>h1{
@@ -42,4 +42,32 @@ section{
 #pagination{
   display: flex;
   justify-content: center;
+}
+
+#contact-list{
+  list-style: none;
+  position: absolute;
+  left: 220px;
+  top: 200px;
+  text-align:center;
+  border-style: double;
+  border-color: #eee;
+  width: 500px;
+}
+
+#photo{
+  width: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  right: 120px;
+  top: 75px;
+}
+
+#name,#address,#tel{
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 10px;
+  position: relative;
+  left: 250px;
+  bottom: 100px;
 }

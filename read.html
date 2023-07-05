@@ -11,6 +11,19 @@
   <script src="read.js"></script>
   <link rel="stylesheet" href="layout_0705.css">
   <title>Document</title>
+  <script>
+    $(document).ready(async function(){
+      const no = getno();
+      if(no===null){
+        alert('주소를 찾을 수 없습니다');
+      }
+      const contact = await fetch(no);
+      if(contact===null){
+        alert('정보를 찾을 수 없습니다');
+      }
+      printContacts(contact);
+    })
+  </script>
 </head>
 <body>
   <div id="page">
@@ -22,7 +35,16 @@
     </nav>
     <main>
       <aside></aside>
-      <section></section>
+      <section>
+        <ul id="contact-list">
+          <li>
+            <img id="photo">
+          </li>
+          <li id="name"></li>
+          <li id="address"></li>
+          <li id="tel"></li>
+        </ul>
+      </section>
       <aside></aside>
     </main>
     <footer>copyright &copy;2023 All Right Reserved</footer>
