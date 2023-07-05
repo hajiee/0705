@@ -1,4 +1,4 @@
-const API = "https://sample.bmaster.kro.kr/contacts";
+const API = "http://sample.bmaster.kro.kr/contacts";
 
 function getPageno(){
  const params = new URLSearchParams(location.search);
@@ -28,5 +28,5 @@ async function fetch(pageno=1, pagesize=10){
 }
 
 function getpagination({pageno,pagesize,totalcount, blockSize=5}){
-  
+
 }
