@@ -10,6 +10,17 @@
   <script src="list_0705.js"></script>
   <link rel="stylesheet" href="layout_0705.css">
   <title>Document</title>
+  <script>
+    $(document).ready(async function(){
+      const pageno = getPageno();
+      const result = await fetch(pageno);
+      if(result===null){
+        alert("응답하지 않는 서버입니다");
+        location.href="index.html";
+      }
+      console.log(result);
+    })
+  </script>
 </head>
 <body>
   <div id="page">
@@ -21,7 +32,22 @@
     </nav>
     <main>
       <aside></aside>
-      <section></section>
+      <section>
+        <table class="table">
+          <thead>
+            <tr>
+              <td>번호</td>
+              <td>이름</td>
+              <td>주소</td>
+              <td>연락처</td>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+        <ul class="pagination" id="pagination">
+        </ul>
+      </section>
       <aside></aside>
     </main>
     <footer>copyright &copy;2023 All Right Reserved</footer>
