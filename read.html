@@ -13,13 +13,15 @@
   <title>Document</title>
   <script>
     $(document).ready(async function(){
-      const no = getno();
+      const no = getNo();
       if(no===null){
         alert('주소를 찾을 수 없습니다');
+        location.href="list_0705.html";
       }
       const contact = await fetch(no);
       if(contact===null){
         alert('정보를 찾을 수 없습니다');
+        location.href="list_0705.html";
       }
       printContacts(contact);
     })

@@ -1,10 +1,10 @@
-function getno(){
+function getNo(){
   const params = new URLSearchParams(location.search).get('no');
   const no = parseInt(params);
   if(isNaN(no)){
-    return 1;
+    return null;
   }else if(no<1){
-    return 1;
+    return null;
   }else{
     return no;
   }
